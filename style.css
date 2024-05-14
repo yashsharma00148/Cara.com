@@ -75,6 +75,7 @@ color: #1a1a1a;
     }
 }
 
+
 .section1{
     background-image: url(img/hero4.png);
     height: 90vh;
@@ -325,6 +326,11 @@ font-size: 21px;
 }
 .banner button:hover{
     background-color: #088178;
+}
+@media(max-width:1400px){
+    .banner2{
+        flex-direction: column;
+    }
 }
 
 
