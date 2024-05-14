@@ -3,6 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     
+    
 }
 .cart-icon{
     color: black;
@@ -14,7 +15,7 @@
     align-items: center;
     padding: 20px 80px;
     background-color: #dae1f1;
-    position: sticky;
+    position: fixed;
     top: 0px;
     
     
@@ -22,6 +23,7 @@
 header{
     background: #e3e6f3;
     width: 100vw;
+    height: 100vh;
 
 }
 .nav-list{
@@ -46,10 +48,25 @@ color: #1a1a1a;
     color: green;
     border-bottom: 2px solid green;
 }
+.menu-icon{
+    display: none;
+}
+
 .hamburger{
     font-size: 25px;
     color: #1a1a1a;
-    display: none;
+    
+}
+
+@media(max-width:500px){
+    .navbar{
+        padding: 10px 15px;
+        width: 100vw;
+        min-width: 500px;
+    }
+    header{
+        min-width: 500px;
+    }
 }
 
 @media(max-width:1000px){
@@ -57,24 +74,30 @@ color: #1a1a1a;
         flex-direction: column;
         width: 300px;
         height: 100vh;
-        position: fixed;
+        position: absolute;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         background-color: #e3e6f3;
-        right: -300px;
+        right: 0px;
         top: 82px;
+        display: none;
+        z-index: 1001;
+       
 
         
     }
+    .menu-icon{
+        display: flex;
+    }
     .nav-list li{
-        margin-top: 20px;
+        margin-top: 3%;
+        margin-left: 30px;
     }
     .hamburger{
         display: flex;
 
     }
 }
-
 
 .section1{
     background-image: url(img/hero4.png);
@@ -83,6 +106,7 @@ color: #1a1a1a;
     background-position: top 25% right 0;
     padding: 200px 200px;
     font-family: "League Spartan", sans-serif;
+    margin-top: 10vh;
 
 }
 h4{
@@ -128,15 +152,29 @@ p{
 
 
 }
-@media(max-width:1000px){
+
+@media(max-width:1450px){
     .section1{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    
     }
 
 } 
+.content{
+   
+    min-width: 400px;
+    
+
+}
+@media(max-width:800px){
+    .section1 h1{
+        font-size: 40px;
+        width: 100%;
+    }
+}
 
 .features{
     width: 100%;
@@ -181,6 +219,18 @@ p{
 }
 
 
+@media(max-width:900px){
+    .feature{
+        margin-top: 20px;
+    }
+}
+@media(max-width:45px){
+    .features{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 
 .section-product{
     width: 100vw;
@@ -188,10 +238,14 @@ p{
     text-align: center;
 
 }
+.products{
+    display: flex;
+    justify-content: space-between;
+}
 
 .product{
-    width: 22%;
     min-width: 200px;
+    width: 20%;
      padding: 30px 10px;
     border: 2px solid rgba(0, 0, 0, 0.223);
     margin: 50px 20px;
@@ -211,7 +265,7 @@ p{
     margin-top: 8px;
 }
 .product-name{
-    font-size: 21px;
+    font-size: 19px;
     color: #1a1a1a;
     margin-top: 10px;
 }
@@ -234,32 +288,81 @@ p{
     flex-wrap: wrap;
     width: 100%;
 }
+.content-sec-pro{
+    min-width: 400px;
+}
+@media(max-width:590px){
+    .content-sec-pro h1{
+        font-size: 40px;
+    }
+}
+@media(max-width:1060px){
+.product{
+    width: 40%;
+    margin: 20px 20px;
+    
+    
+    }}
+    @media(max-width:580px){
+        .product{
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+
 .banner1{
     width: 100vw;
+    min-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     background-image: url(img/b2.jpg);
-    height: 40vh;
+    height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     font-family:  'Times New Roman', Times, serif;
-
-
-
-}
-.banner1 h3{
-    color: #fff;
-    font-size: 30px;
-}
-.banner1 h1{
-    color: #fff;
-    font-size: 50px;
+    
     
 
+
+
 }
+.content-banner1{
+    width: 90%;
+    margin-top: 7%;
+    min-width: 400px;
+    height: 90%;
+    /* margin-left: 5%; */
+    text-align: center;
+    min-height: 300px;
+
+    
+}
+.banner1 h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+.banner1 h2{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+@media(max-width:840px){
+    .banner1 h2{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .banner1 h3{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
+
+
 .banner1 button{
     padding: 10px 40px;
     border-radius: 10px;
@@ -327,15 +430,70 @@ font-size: 21px;
 .banner button:hover{
     background-color: #088178;
 }
+
+
 @media(max-width:1400px){
     .banner2{
         flex-direction: column;
+    }
+    .banner{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media(max-width:500px){
+    .banner{
+        width: 95%;
+        margin-left: 3%;
     }
 }
 
 
 
 
+.newsletter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background: linear-gradient(to right, black ,white);
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.newsletter-content{
+    width: 40%;
+    color: white;
+    margin-left: 10%;
 
+}
 
-
+.newsletter-content h3{
+    font-size: 28px;
+}
+.newsletter-content h2{
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+}
+.search-newsletter{
+    width: 50%;
+    margin-top: 50px;
+}
+#srch-newsletter{
+    width: 45%;
+    min-width: 250px;
+    height: 45px;
+}
+.newsletter-btn{
+    height: 45px;
+    width: 28%;
+   min-width: 150px;
+    font-size: 15px;
+    word-spacing: 2px;
+    letter-spacing: .3px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
